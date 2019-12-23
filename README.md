@@ -12,7 +12,7 @@ A templating script which takes in parameters from the user and setups a folder 
 
 ## Map of extension and output
 ```
-{output-location/ext-name}/
+/{output-location/ext-name}/
 ├── icons
 │   ├── icon128.png
 │   ├── icon16.png
@@ -36,7 +36,7 @@ All of the required options and any optional ones you want to specify
 . ./template-r.sh <options>
 ```
 
-Example execution;
+#### Example execution;
 ```
 . ./template-r.sh --author="Lui" --ext-name="Template-r" --ext-short-name="plate-r" --description="Create a template"
 ```
