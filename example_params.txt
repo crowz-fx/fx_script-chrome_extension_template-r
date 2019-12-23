@@ -1,0 +1,13 @@
+# comments are ignored with a #
+
+# Required Parameters
+ext-name=
+ext-short-name=
+ext-description=
+ext-author=
+
+# Optional Parameters
+output-location_dir=
+ext-permissions=""
+git-init=false
+git-commit-msg=

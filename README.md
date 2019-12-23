@@ -60,12 +60,15 @@ All of the required options and any optional ones you want to specify
 # --git-commit-msg="<String>"  ;; default="Initial commit and setup" ;; message for the intial commit message (have to specified the git-init parameter)
 ```
 
-#### Script with a params.txt file
+#### 2. Script with a params.txt file
+Notes - an example of the file to use is [HERE][1]
 ```
 . ./template-r.sh --params-file="/tmp/params.txt"
 ```
 
-#### Script run interactively
+#### 3. Run script interactively
 ```
 . ./template-r.sh
 ```
+
+[1]: example_params.txt
