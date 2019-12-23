@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+
+    "background": {
+        "persistent": true,
+        "scripts": ["src/index.js"]
+    },
+
+    "name": "%%TEMPLATE_NAME%%",
+    "short_name": "%%TEMPLATE_SHORT_NAME%%",
+    "author": "%%TEMPLATE_AUTHOR%%",
+    "description" : "%%TEMPLATE_DESCRIPTION%%",
+    "version": "0.1",
+    "permissions": ["%%TEMPLATE_PERMISSIONS%%"],
+    
+    "icons": { 
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png",
+        "256": "icons/icon256.png"
+    },
+
+    "browser_action": {
+        "default_popup": "src/index.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "32": "icons/icon32.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png",
+            "256": "icons/icon256.png"
+        },
+        "default_title": "%%TEMPLATE_NAME%%"
+    }
+}

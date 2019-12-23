@@ -1,0 +1,3 @@
+/**
+    author: %%TEMPLATE_AUTHOR%%
+**/
