@@ -6,9 +6,11 @@ A templating script which takes in parameters from the user and setups a folder 
 - Git init feature with intial commit
 - Ability to pass in parameters using a 'parms.txt' file
 
+## Notes and considerations
+- The output folder is the --ext-name paramter to lowercase and spaces replaced with an _
+- The icons are blank files with a .png extension and need to be replaced
+
 ## Map of extension and output
-Note - the output folder is the --ext-name paramter to lowercase and spaces replaced with an _
-Note - the icons are blank files with a .png extension and need to be replaced
 ```
 {output-location/ext-name}/
 ├── icons
