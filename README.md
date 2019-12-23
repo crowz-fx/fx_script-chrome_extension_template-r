@@ -1,0 +1,1 @@
+# fx_script-chrome_extension_template-r
