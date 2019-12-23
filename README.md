@@ -4,7 +4,8 @@ A templating script which takes in parameters from the user and setups a folder 
 ## Features
 - Templating for folders
 - Git init feature with intial commit
-- Ability to pass in parameters using a 'parms.txt' file
+- Ability to pass in parameters using a 'params.txt' file
+- Ability to execute the script interactively taking in the user input
 
 ## Notes and considerations
 - The output folder is the --ext-name paramter to lowercase and spaces replaced with an _
@@ -30,29 +31,41 @@ A templating script which takes in parameters from the user and setups a folder 
 ```
 
 ## Shell execution and parameters
+There are 3 ways to execute this script;
+1. Script with parameters
+2. Script with a params.txt file passed in
+3. Script with no parameters or params.txt file and hence run interactively
+
 ### Execution
 All of the required options and any optional ones you want to specify
-```
-. ./template-r.sh <options>
-```
 
-#### Example execution;
+#### 1. Script with parameters;
 ```
 . ./template-r.sh --author="Lui" --ext-name="Template-r" --ext-short-name="plate-r" --description="Create a template"
 ```
 
-### Required parameters
+##### Required parameters
 ```
-# --author="<String>"         ;; default="Joe Bloggs"             ;; name of the author
-# --ext-name="<String>"       ;; default="Amazing Extension"      ;; name of the extension
-# --ext-short-name="<String>" ;; default="Shorty"                 ;; short name of the extension
-# --description="<String>"    ;; default="What a great extension" ;; no explanation needed
+# --author="<String>"          ;; default="Joe Bloggs"               ;; name of the author
+# --ext-name="<String>"        ;; default="Amazing Extension"        ;; name of the extension
+# --ext-short-name="<String>"  ;; default="Shorty"                   ;; short name of the extension
+# --description="<String>"     ;; default="What a great extension"   ;; no explanation needed
 ```
 
-### Optional parameters
+##### Optional parameters
 ```
 # --output-location="<String>" ;; default=cwd                        ;; where to output the output folder
 # --ext-permissions="<String>" ;; default=""                         ;; permissions to give the app i.e. tabs
 # --git-init                   ;; default=false                      ;; whether to git init 
 # --git-commit-msg="<String>"  ;; default="Initial commit and setup" ;; message for the intial commit message (have to specified the git-init parameter)
+```
+
+#### Script with a params.txt file
+```
+. ./template-r.sh --params-file="/tmp/params.txt"
+```
+
+#### Script run interactively
+```
+. ./template-r.sh
 ```
