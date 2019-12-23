@@ -12,6 +12,8 @@
     "description" : "%%TEMPLATE_DESCRIPTION%%",
     "version": "0.1",
     "permissions": ["%%TEMPLATE_PERMISSIONS%%"],
+
+    "options_page": "src/options.html",
     
     "icons": { 
         "16": "icons/icon16.png",
