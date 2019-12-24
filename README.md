@@ -4,7 +4,6 @@ A templating script which takes in parameters from the user and setups a folder 
 ## Features
 - Templating for folders
 - Git init feature with intial commit
-- Ability to pass in parameters using a 'params.txt' file
 - Ability to execute the script interactively taking in the user input
 
 ## Notes and considerations
@@ -31,10 +30,9 @@ A templating script which takes in parameters from the user and setups a folder 
 ```
 
 ## Shell execution and parameters
-There are 3 ways to execute this script;
+There are 2 ways to execute this script;
 1. Script with parameters
-2. Script with a params.txt file passed in
-3. Script with no parameters or params.txt file and hence run interactively
+2. Script with no parameters and hence run interactively
 
 ### Execution
 All of the required options and any optional ones you want to specify
@@ -60,15 +58,7 @@ All of the required options and any optional ones you want to specify
 # --git-commit-msg="<String>"  ;; default="Initial commit and setup" ;; message for the intial commit message (have to specified the git-init parameter)
 ```
 
-#### 2. Script with a params.txt file
-Notes - an example of the file to use is [HERE][1]
-```
-./template-r.sh --params-file="/tmp/params.txt"
-```
-
-#### 3. Run script interactively
+#### 2. Run script interactively
 ```
 ./template-r.sh
 ```
-
-[1]: example_params.txt
