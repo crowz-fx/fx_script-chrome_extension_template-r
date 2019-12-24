@@ -13,7 +13,7 @@ A templating script which takes in parameters from the user and setups a folder 
 
 ## Map of extension and output
 ```
-/{output-location/ext-name}/
+/{output-location}/{ext-name}/
 ├── icons
 │   ├── icon128.png
 │   ├── icon16.png
@@ -41,7 +41,7 @@ All of the required options and any optional ones you want to specify
 
 #### 1. Script with parameters;
 ```
-. ./template-r.sh --author="Lui" --ext-name="Template-r" --ext-short-name="plate-r" --description="Create a template"
+./template-r.sh --author="Lui" --ext-name="Template-r" --ext-short-name="plate-r" --description="Create a template"
 ```
 
 ##### Required parameters
@@ -63,12 +63,12 @@ All of the required options and any optional ones you want to specify
 #### 2. Script with a params.txt file
 Notes - an example of the file to use is [HERE][1]
 ```
-. ./template-r.sh --params-file="/tmp/params.txt"
+./template-r.sh --params-file="/tmp/params.txt"
 ```
 
 #### 3. Run script interactively
 ```
-. ./template-r.sh
+./template-r.sh
 ```
 
 [1]: example_params.txt
