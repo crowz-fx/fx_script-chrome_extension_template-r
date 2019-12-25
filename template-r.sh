@@ -117,12 +117,23 @@ create_package() {
     mkdir -p $full_path_to_package
     cp -R "`pwd`/base_template/" $full_path_to_package
     
-    find ${full_path_to_package} -type f -exec sed -i 's/%%TEMPLATE_NAME%%/${ext_name}/g' {} +
+    find ${full_path_to_package} -type f -exec sed -i '' "s/%%TEMPLATE_NAME%%/${ext_name}/g" {} +
+    find ${full_path_to_package} -type f -exec sed -i '' "s/%%TEMPLATE_SHORT_NAME%%/${ext_short_name}/g" {} +
+    find ${full_path_to_package} -type f -exec sed -i '' "s/%%TEMPLATE_AUTHOR%%/${ext_author}/g" {} +
+    find ${full_path_to_package} -type f -exec sed -i '' "s/%%TEMPLATE_DESCRIPTION%%/${ext_description}/g" {} +
+    find ${full_path_to_package} -type f -exec sed -i '' "s/%%TEMPLATE_PERMISSIONS%%/${ext_permissions}/g" {} +
 
-    #%%TEMPLATE_SHORT_NAME%%
-    #%%TEMPLATE_AUTHOR%%
-    #%%TEMPLATE_DESCRIPTION%%
-    #%%TEMPLATE_PERMISSIONS%%
+    if [[ $git_init == "true" ]]; then
+        echo "--> Setting up git repo..."
+        current_dir=`pwd`
+        cd ${full_path_to_package} && git init && git add .
+
+        echo "--> Files added and staged..."
+        git status
+
+        echo "--> Adding in inital commit..."
+        git commit -m "${git_commit_msg}"
+    fi
 }
 
 echo ""
